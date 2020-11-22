@@ -34,18 +34,23 @@ public:
     }
 
     void display(){
-        cout<<"("<<x<<","<<y<<")";
+        cout<<"("<<x<<","<<y<<")"<<endl;
     }
 };
 
 main()
 {
-    Point p1(2,3);
-    
-    p1.getX();
-    p1.getY();
-    p1.setX(15);
-    p1.setY(21);
-    cout<<"The final coordinates are";
+    Point p1;
+
     p1.display();
+    p1.setX(2);
+    p1.setY(3);
+    p1.display();
+
+    Point p2(5,2);
+
+    p2.display();
+    p2.setX(6);
+    p2.setY(3);
+    p2.display();
 }
