@@ -30,6 +30,6 @@ public class Point {
 	}
 	
 	public void display() {
-		System.out.println("Point is: (" + x + "," + y + ")");
+		System.out.println("\nPoint is: (" + x + "," + y + ")");
 	}
 }
