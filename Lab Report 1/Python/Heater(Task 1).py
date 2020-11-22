@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # Name:        Heater
 # Purpose:     OOP Lab 1
 #
@@ -7,9 +7,9 @@
 # Created:     22/11/2020
 # Copyright:   (c) Mohsin 2020
 # Licence:     <your licence>
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
-class Heater :
+class Heater:
     temperature = 0
 
     def __init__(self):
@@ -22,7 +22,8 @@ class Heater :
         self.temperature -= 5
 
     def display(self):
-        print ("Temperature is " , self.temperature)
+        print("Temperature is ", self.temperature)
+
 
 h1 = Heater()
 
