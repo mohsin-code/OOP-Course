@@ -8,5 +8,15 @@ class Main {
 		h1.display();
 		h1.warmer();
 		h1.display();
+		
+		Heater h2 = new Heater();
+		
+		h2.display();
+		h2.cooler();
+		h2.cooler();
+		h2.cooler();
+		h2.cooler();
+		h2.cooler();
+		h2.display();
 	}
 }

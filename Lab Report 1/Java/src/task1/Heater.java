@@ -1,6 +1,6 @@
 package task1;
 public class Heater {
-	double temprature;
+	int temprature;
 	
 	public Heater() {
 		temprature = 20;
@@ -15,6 +15,6 @@ public class Heater {
 	}
 	
 	public void display() {
-		System.out.println("Temprature is: " + temprature);
+		System.out.println("\nTemprature is: " + temprature);
 	}
 }
