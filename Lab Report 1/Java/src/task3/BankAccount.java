@@ -19,6 +19,6 @@ public class BankAccount {
 	}
 	
 	public void display() {
-		System.out.println("\nCurrent Balance: " + balance);
+		System.out.println("Current Balance: " + balance);
 	}
 }
