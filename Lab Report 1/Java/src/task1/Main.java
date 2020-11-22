@@ -1,3 +1,4 @@
+package task1;
 class Main {
 	public static void main(String[] args) {
 		Heater h1 = new Heater();
