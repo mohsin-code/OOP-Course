@@ -55,3 +55,24 @@ void complex::mulCom(complex c1, complex c2) {
     im = (c1.re * c2.im) + (c2.re * c1.im);
 }
 
+main() {
+    complex c1,c2,c;
+    
+    c1.input();
+    c1.show();
+
+    c2.input();
+    c2.show();
+
+    c.addCom(c1, c2);
+    cout<<"Sum = ";
+    c.show();
+
+    c.subCom(c1, c2);
+    cout<<"Difference = ";
+    c.show();
+
+    c.mulCom(c1, c2);
+    cout<<"Product = ";
+    c.show();
+}
