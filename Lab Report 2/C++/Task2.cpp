@@ -51,6 +51,7 @@ complex complex::mulCom(complex c) {
     complex x;
     x.re = (re * c.re) - (im * c.im);
     x.im = (re * c.im) + (c.re * im);
+    return x;
 }
 
 main() {
