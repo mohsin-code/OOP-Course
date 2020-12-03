@@ -4,7 +4,7 @@ using namespace std;
 class IntegerSet {
     private:
         int set[50];
-    
+
     public:
         IntegerSet();
         void NewIntegerSet(int arr[]);
@@ -17,7 +17,9 @@ class IntegerSet {
 };
 
 IntegerSet::IntegerSet() {
-    set = {};
+    for(int i = 0; i < 50; i++) {
+        set[i] = 0;
+    }
 }
 
 void IntegerSet::NewIntegerSet(int arr[]){
@@ -54,6 +56,7 @@ void IntegerSet::SetPrint(){
     for (int i = 0; i < 50; i++) {
         cout<<set[i]<<" ";
     }
+    cout<<endl;
 }
 
 bool IntegerSet::IsEqualTo(IntegerSet i){
@@ -62,7 +65,7 @@ bool IntegerSet::IsEqualTo(IntegerSet i){
             return false;
         }
         return true;
-    }    
+    }
 }
 
 main() {
@@ -79,22 +82,28 @@ main() {
         cin>>y[i];
         if(y[i] != 0) y[i] = 1;
     }
-    
+
     IntegerSet i1,i2,i3;
 
     i1.NewIntegerSet(x);
+    cout<<"I1: ";
     i1.SetPrint();
 
     i2.NewIntegerSet(y);
+    cout<<"I2: ";
     i2.SetPrint();
 
     int k,m;
 
-    cout<<"Type location of insertion in i1: ";
+    cout<<"\nType location of insertion in I1: ";
     cin>>k;
-    
-    cout<<"Type location of deletion in i1: ";
-    cin>>k;
+    i1.InsertElement(k);
+
+    cout<<"Type location of deletion in I1: ";
+    cin>>m;
+    i1.DeleteElement(m);
+
+    cout<<endl;
 
     i3 = i1.UnionOfIntegerSets(i2);
     i3.SetPrint();
@@ -102,5 +111,5 @@ main() {
     i3 = i1.IntersectionOfIntegerSets(i2);
     i3.SetPrint();
 
-    cout<<"Are i1 and i2 equal: "<<i1.IsEqualTo(i2);
+    cout<<"\nAre i1 and i2 equal: "<<i1.IsEqualTo(i2);
 }
