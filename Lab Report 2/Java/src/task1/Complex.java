@@ -1,5 +1,7 @@
 package task1;
 
+import java.util.*; 
+
 public class Complex {
 	private double re, im;
 	
@@ -11,6 +13,22 @@ public class Complex {
 	public Complex(double r, double i) {
 		this.re = r;
 		this.im = i;
+	}
+	
+	public void Input() {
+		Scanner s1 = new Scanner(System.in);
+		System.out.print("\nReal Value = ");
+		this.re = s1.nextDouble();
+		System.out.print("Imaginary Value = ");
+		this.im = s1.nextDouble();
+	}
+	
+	public void Show() {
+		if (this.im >= 0) {
+			System.out.print(this.re + "+" + this.im + "i");
+		} else {
+			System.out.print(this.re + this.im + "i");
+		}
 	}
 	
 	public void AddCom(Complex c1, Complex c2) {
@@ -26,13 +44,5 @@ public class Complex {
 	public void MulCom(Complex c1, Complex c2) {
 		this.re = (c1.re * c2.re) - (c1.im * c2.im);
 		this.im = (c1.re * c2.im) + (c2.re * c1.im);
-	}
-	
-	public void Show() {
-		if (this.im >= 0) {
-			System.out.print(this.re + "+" + this.im + "i");
-		} else {
-			System.out.print(this.re + this.im + "i");
-		}
 	}
 }
