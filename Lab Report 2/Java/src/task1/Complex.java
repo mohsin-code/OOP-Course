@@ -17,7 +17,7 @@ public class Complex {
 	
 	public void Input() {
 		Scanner s1 = new Scanner(System.in);
-		System.out.print("\nReal Value = ");
+		System.out.print("Real Value = ");
 		this.re = s1.nextDouble();
 		System.out.print("Imaginary Value = ");
 		this.im = s1.nextDouble();
