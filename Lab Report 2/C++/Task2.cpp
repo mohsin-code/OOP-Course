@@ -19,24 +19,17 @@ complex::complex():re(0),im(0){}
 
 complex::complex(double r, double i):re(r),im(i){}
 
-// complex complex::negate() {
-//     complex temp;
-//     temp.re= - re;
-//     temp.im= - im;
-//     return temp;
-// }
-
 void complex::show() {
     if(im>0)
-        cout << re << " + " << im << "i" << endl;
+        cout << re << "+" << im << "i" << endl;
     else
         cout << re << im << "i" << endl;
 }
 
 void complex::input() {
-    cout<<"\nEnter real number: ";
+    cout<<"Enter real number: ";
     cin>>re;
-    cout<<"\nEnter imaginary number: ";
+    cout<<"Enter imaginary number: ";
     cin>>im;
 }
 
@@ -64,9 +57,11 @@ main() {
     complex c1,c2,c;
     
     c1.input();
+    cout<<"c1 = ";
     c1.show();
 
     c2.input();
+    cout<<"c2 = ";
     c2.show();
 
     c = c1.addCom(c2);
