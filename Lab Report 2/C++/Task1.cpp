@@ -51,11 +51,11 @@ main() {
     complex c1,c2,c;
     
     c1.input();
-    cout<<"Sum = ";
+    cout<<"C1 = ";
     c1.show();
 
     c2.input();
-    cout<<"Sum = ";
+    cout<<"C2 = ";
     c2.show();
 
     c.addCom(c1, c2);
