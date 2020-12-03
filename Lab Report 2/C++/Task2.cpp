@@ -57,11 +57,11 @@ main() {
     complex c1,c2,c;
     
     c1.input();
-    cout<<"c1 = ";
+    cout<<"C1 = ";
     c1.show();
 
     c2.input();
-    cout<<"c2 = ";
+    cout<<"C2 = ";
     c2.show();
 
     c = c1.addCom(c2);
