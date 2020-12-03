@@ -7,7 +7,6 @@ class complex {
     public:
         complex();
         complex(double r, double i);
-        // complex negate();       //returns complex object
         void show();
         void input();
         void addCom(complex c1, complex c2);
@@ -19,13 +18,6 @@ complex::complex():re(0),im(0){}
 
 complex::complex(double r, double i):re(r),im(i){}
 
-// complex complex::negate() {
-//     complex temp;
-//     temp.re= - re;
-//     temp.im= - im;
-//     return temp;
-// }
-
 void complex::show() {
     if(im>0)
         cout << re << " + " << im << "i" << endl;
@@ -34,9 +26,9 @@ void complex::show() {
 }
 
 void complex::input() {
-    cout<<"\nEnter real number: ";
+    cout<<"Enter real number: ";
     cin>>re;
-    cout<<"\nEnter imaginary number: ";
+    cout<<"Enter imaginary number: ";
     cin>>im;
 }
 
@@ -59,9 +51,11 @@ main() {
     complex c1,c2,c;
     
     c1.input();
+    cout<<"Sum = ";
     c1.show();
 
     c2.input();
+    cout<<"Sum = ";
     c2.show();
 
     c.addCom(c1, c2);
