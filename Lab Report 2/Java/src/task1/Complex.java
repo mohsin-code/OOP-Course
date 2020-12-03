@@ -25,9 +25,9 @@ public class Complex {
 	
 	public void Show() {
 		if (this.im >= 0) {
-			System.out.print(this.re + "+" + this.im + "i");
+			System.out.println(this.re + "+" + this.im + "i");
 		} else {
-			System.out.print(this.re + this.im + "i");
+			System.out.println(this.re + this.im + "i");
 		}
 	}
 	
