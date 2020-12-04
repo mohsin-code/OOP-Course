@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Complex {
 	private double re, im;
+	private Scanner s1;
 	
 	public Complex () {
 		this.re = 0;
@@ -16,7 +17,7 @@ public class Complex {
 	}
 	
 	public void Input() {
-		Scanner s1 = new Scanner(System.in);
+		s1 = new Scanner(System.in);
 		System.out.print("Real Value = ");
 		this.re = s1.nextDouble();
 		System.out.print("Imaginary Value = ");
