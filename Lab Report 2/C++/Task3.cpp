@@ -31,7 +31,7 @@ void IntegerSet::NewIntegerSet(int arr[]){
 IntegerSet IntegerSet::UnionOfIntegerSets(IntegerSet i) {
     IntegerSet j;
     for (int n = 0; n < 50; n++) {
-        j.set[n] = set[n] || i.set[n];
+        j.set[n] = set[n] && i.set[n];
     }
     return j;
 }
@@ -39,7 +39,7 @@ IntegerSet IntegerSet::UnionOfIntegerSets(IntegerSet i) {
 IntegerSet IntegerSet::IntersectionOfIntegerSets(IntegerSet i) {
     IntegerSet j;
     for (int n = 0; n < 50; n++) {
-        j.set[n] = set[n] && i.set[n];
+        j.set[n] = set[n] || i.set[n];
     }
     return j;
 }
