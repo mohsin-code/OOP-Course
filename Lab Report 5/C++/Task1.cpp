@@ -87,13 +87,13 @@ void Circle::Circumference(){
 }
 
 //Cylinder Subclass
-class Cylinder:public Circle {
+class Cylinder:public Point {
 	private:
 		float height;
 		
 	public:
 		Cylinder();
-		Cylinder(float h, int r, Point p);
+		Cylinder(float h, float r, Point p);
 		Cylinder(float h, Circle c);
 		Cylinder(float h, int r, int x, int y);
 		void Area();
@@ -103,8 +103,8 @@ class Cylinder:public Circle {
 //Cylinder Constructors
 Cylinder::Cylinder():height(0){}
 
-Cylinder::Cylinder(float h, int r, Point p):height(h){
-	radius = r; 
+Cylinder::Cylinder(float h, float r, Point p):height(h){
+	radius = r;
 }
 
 Cylinder::Cylinder(float h, Circle c):height(h){}
@@ -112,13 +112,13 @@ Cylinder::Cylinder(float h, Circle c):height(h){}
 Cylinder::Cylinder(float h, int r, int a, int b):height(h){
 	this->x = a;
 	this->y = b;
-	this->radius = r;
+	//this->radius = r;
 }
 
 //Cylinder Methods
 void Cylinder::Area(){
 	float area = 2 * M_PI * radius * (radius + height);
-	cout<<"Area is "<<area<<radius<<endl;
+	cout<<"Area is "<<area<<endl;
 }
 
 void Cylinder::Volume(){
