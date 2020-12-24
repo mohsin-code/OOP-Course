@@ -4,9 +4,8 @@ class IntegerSet:
     def __init__(self):
         pass
 
-    def NewIntegerSet(self, arr):
-        for i in range(50):
-            self.set[i] = arr[i]
+    def NewIntegerSet(self, arr: object):
+        self.set = [arr[i] for i in range(50)]
 
     def UnionOfIntegerSets(self, i):
         j = IntegerSet()
@@ -38,11 +37,15 @@ class IntegerSet:
             return False
 
 
-# print("Enter values for X:", end=" ")
-x = [0 for i in range(50)]
+# x = [0 for i in range(50)]
+arr1 = input("Enter values for X: ").split(' ')
+x = [int(i) for i in arr1]
+print(x, len(x))
 
-# print("Enter values for Y:", end=" ")
-y = [1 for i in range(50)]
+# y = [1 for i in range(50)]
+arr2 = input("Enter values for Y: ").split(' ')
+y = [int(i) for i in arr2]
+print(y, len(y))
 
 i1 = IntegerSet()
 i2 = IntegerSet()
