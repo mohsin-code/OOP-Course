@@ -53,7 +53,7 @@ class Circle: public Point{
 		Circle(float r, Point p);
 		Circle(float r, int x, int y);
 		void setRadius(float r);
-		void getRadius();
+		float getRadius();
 		void Circumference();	
 	};
 
@@ -77,8 +77,8 @@ void Circle::setRadius(float r){
 	radius = r;
 }
 	
-void Circle::getRadius(){
-	cout<<"Radius is "<<radius<<endl;
+float Circle::getRadius(){
+	return radius;
 }
 	
 void Circle::Circumference(){
@@ -87,7 +87,7 @@ void Circle::Circumference(){
 }
 
 //Cylinder Subclass
-class Cylinder:public Point {
+class Cylinder:public Circle {
 	private:
 		float height;
 		
@@ -107,12 +107,12 @@ Cylinder::Cylinder(float h, float r, Point p):height(h){
 	radius = r;
 }
 
-Cylinder::Cylinder(float h, Circle c):height(h){}
+Cylinder::Cylinder(float h, Circle c): Circle(c.getRadius(), 0, 0), height(h){}
 
 Cylinder::Cylinder(float h, int r, int a, int b):height(h){
 	this->x = a;
 	this->y = b;
-	//this->radius = r;
+	this->radius = r;
 }
 
 //Cylinder Methods
@@ -132,7 +132,7 @@ main()
     Point p(2,3);
     Circle c(4,p);
 
-    c.getRadius();
+    cout<<"Radius is "<<c.getRadius()<<endl;
     
     Cylinder cy(6.4,c);
 
