@@ -60,8 +60,8 @@ class Employee
         
         void show()
         {
-            cout<<"\nDetails:\nName: "<<*name<<endl;
-            cout<<"Enter department: "<<*department<<endl;
+            cout<<"\nDetails:\nName: "<<name<<endl;
+            cout<<"Enter department: "<<department<<endl;
             cout<<"Enter salary:"<<salary<<endl;
             cout<<"Enter time of service:"<<serviceTime<<endl;
         }
