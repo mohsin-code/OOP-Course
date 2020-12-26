@@ -49,7 +49,7 @@ class Employee
             
             cout<<"Enter department: ";
             cin>>d;
-            department = new char[.length() + 1];
+            department = new char[d.length() + 1];
             strcpy(department, d.c_str());
 			
 			cout<<"Enter salary:";
@@ -60,8 +60,8 @@ class Employee
         
         void show()
         {
-            cout<<"\nDetails:\nName: "<<*name<<endl;
-            cout<<"Enter department: "<<*department<<endl;
+            cout<<"\nDetails:\nName: "<<name<<endl;
+            cout<<"Enter department: "<<department<<endl;
             cout<<"Enter salary:"<<salary<<endl;
             cout<<"Enter time of service:"<<serviceTime<<endl;
         }
