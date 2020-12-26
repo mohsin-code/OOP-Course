@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 
 class Employee
@@ -10,18 +11,14 @@ class Employee
         double serviceTime;
     
     public:
-        Employee()
+        Employee():name(0),department(0)
         {
-            name = '';
-            department = '';
             salary = 0;
             serviceTime = 0;
         }
 
-        Employee(char n, char dep, double sal, double t)
+        Employee(char n[], char dep[], double sal, double t):name(n),department(dep)
         {
-            name* = new char(n);
-            department* = new char(dep);
             salary = sal;
             serviceTime = t;
         }
@@ -43,11 +40,19 @@ class Employee
 
         void input()
         {
-            cout<<"Enter name: ";
-            cin>>name;
+            string d,n;
+            
+			cout<<"Enter name: ";
+            cin>>n;
+            name = new char[n.length() + 1];
+            strcpy(name, n.c_str());
+            
             cout<<"Enter department: ";
-            cin>>department;
-            cout<<"Enter salary:";
+            cin>>d;
+            department = new char[.length() + 1];
+            strcpy(department, d.c_str());
+			
+			cout<<"Enter salary:";
             cin>>salary;
             cout<<"Enter time of service:";
             cin>>serviceTime;
@@ -55,15 +60,15 @@ class Employee
         
         void show()
         {
-            cout<<"\nDetails:\nName: "<<name<<endl;
-            cout<<"Enter department: "<<department<<endl;
+            cout<<"\nDetails:\nName: "<<*name<<endl;
+            cout<<"Enter department: "<<*department<<endl;
             cout<<"Enter salary:"<<salary<<endl;
             cout<<"Enter time of service:"<<serviceTime<<endl;
         }
 
         ~Employee()
         {
-            delete name, department, salary, serviceTime;
+            delete[] name, department, salary, serviceTime;
         }
 };
 
@@ -81,4 +86,6 @@ int main()
     Employee e3(e1);
     
     e3.show();
+    
+    return 0;
 }
