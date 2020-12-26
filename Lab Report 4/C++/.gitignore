@@ -32,4 +32,4 @@
 *.app
 
 # Hiding Lab Report
-Task1.cpp
+/Task1.cpp
