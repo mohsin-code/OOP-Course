@@ -16,7 +16,7 @@ class IntegerSet:
     def IntersectionOfIntegerSets(self, i):
         j = IntegerSet()
         for n in range(50):
-            j.set[n] = self.set[n] and i.ser[n]
+            j.set[n] = self.set[n] and i.set[n]
         return j
 
     def InsertElement(self, k):
